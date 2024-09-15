@@ -22,21 +22,16 @@ public class SalesForceEdit {
 		driver.findElement(By.xpath("//p[text() ='Sales']")).click();
 		WebElement clickOppurtunities = driver.findElement(By.xpath("//span[text() ='Opportunities']"));
 		driver.executeScript("arguments[0].click()", clickOppurtunities);
-		driver.findElement(By.xpath("//input[@name ='Opportunity-search-input']"))
-				.sendKeys("Salesforce Automation by Lakshmanan");
+		driver.findElement(By.xpath("//input[@name ='Opportunity-search-input']")).sendKeys("Salesforce Automation by Lakshmanan");
 		Thread.sleep(4000);
-		WebElement dropDown = driver
-				.findElement(By.xpath("//div[@data-aura-class ='forceVirtualAction']//a[@role='button']"));
+		WebElement dropDown = driver.findElement(By.xpath("//div[@data-aura-class ='forceVirtualAction']//a[@role='button']"));
 		driver.executeScript("arguments[0].click()", dropDown);
 		WebElement edit = driver.findElement(By.xpath("//a[@title='Edit']//div"));
 		driver.executeScript("arguments[0].click()", edit);
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//input[@name ='CloseDate']")).clear();
 		driver.findElement(By.xpath("//input[@name ='CloseDate']")).sendKeys("15/09/2024");
-
-		driver.findElement(
-				By.xpath("//lightning-base-combobox[@class='slds-combobox_container']//span[text()='Needs Analysis']"))
-				.click();
+                driver.findElement(By.xpath("//lightning-base-combobox[@class='slds-combobox_container']//span[text()='Needs Analysis']")).click();
 		driver.findElement(By.xpath("//lightning-base-combobox-item[@data-value='Perception Analysis']")).click();
 		WebElement status = driver.findElement(By.xpath("(//button[@data-value='--None--'])[3]"));
 		driver.executeScript("arguments[0].click()", status);
