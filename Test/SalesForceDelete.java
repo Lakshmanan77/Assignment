@@ -22,11 +22,9 @@ public class SalesForceDelete {
 		driver.findElement(By.xpath("//p[text() ='Sales']")).click();
 		WebElement clickOppurtunities = driver.findElement(By.xpath("//span[text() ='Opportunities']"));
 		driver.executeScript("arguments[0].click()", clickOppurtunities);
-		driver.findElement(By.xpath("//input[@name ='Opportunity-search-input']"))
-				.sendKeys("Salesforce Automation by Lakshmanan");
+		driver.findElement(By.xpath("//input[@name ='Opportunity-search-input']")).sendKeys("Salesforce Automation by Lakshmanan");
 		Thread.sleep(4000);
-		WebElement dropDown = driver
-				.findElement(By.xpath("//div[@data-aura-class ='forceVirtualAction']//a[@role='button']"));
+		WebElement dropDown = driver.findElement(By.xpath("//div[@data-aura-class ='forceVirtualAction']//a[@role='button']"));
 		driver.executeScript("arguments[0].click()", dropDown);
 		WebElement delete = driver.findElement(By.xpath("//a[@title='Delete']/div"));
 		driver.executeScript("arguments[0].click();", delete);
