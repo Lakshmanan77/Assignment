@@ -28,21 +28,14 @@ public class SalesForceCreate {
 		driver.findElement(By.xpath("//input[@name ='Amount']")).sendKeys("75,000");
 		driver.findElement(By.xpath("//input[@name ='CloseDate']")).sendKeys("13/09/2024");
 		driver.findElement(By.xpath("//span[text()='--None--' ]")).click();
-        driver.findElement(By.xpath("//lightning-base-combobox-item[@data-value='Needs Analysis' ]")).click();
-        driver.findElement(By.xpath("//button[@name ='SaveEdit']")).click();
+                driver.findElement(By.xpath("//lightning-base-combobox-item[@data-value='Needs Analysis' ]")).click();
+                driver.findElement(By.xpath("//button[@name ='SaveEdit']")).click();
         
-        String title = driver.getTitle();
-        if(title.contains("New Opportunity | Salesforce")) {
+                String title = driver.getTitle();
+                if(title.contains("New Opportunity | Salesforce")) {
         	System.out.println("Title is verified");
-        }else {
+                }else {
         	System.out.println("Not verfied");
+                }
         }
-		 
-		 
-		 
-		 
-		
-		
-	}
-
 }
